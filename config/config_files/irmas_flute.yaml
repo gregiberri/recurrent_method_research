@@ -1,0 +1,33 @@
+id: 'irmas_flute'
+env:
+  epochs: 500
+  save_frequency: 250
+  save_val_examples: true
+  vis_filters: true
+data:
+  name: "irmas"
+  params:
+    path: "/home/albert/data/IRMAS"
+    split: ["train", "val"]
+    instruments: "flu"
+    batch_size: 16
+    workers: 0
+    train_input_size: 512
+    val_input_size: 139776
+    few_train_input: False
+    few_val_input: true
+model:
+  name: "base_conv_autoencode_model"
+  model_to_load: null
+  params:
+    kernel_size: 7
+    encoder_filters: [32, 32, 64, 64, 128, 128]
+    encoder_strides: [1,  4,  1,  4,  1,   4]
+    decoder_filters: [128, 64, 32]
+    loss:
+      name: 'mse'
+optimizer:
+  name: 'adam'
+  params:
+    lr: 0.00001
+    weight_decay: 0.0000001

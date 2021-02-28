@@ -2,9 +2,7 @@
 # -*- coding: utf-8 -*-
 import inspect
 import logging
-import multiprocessing
 from types import SimpleNamespace
-from warnings import warn
 
 import yaml
 
