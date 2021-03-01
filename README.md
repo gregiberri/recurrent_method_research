@@ -16,6 +16,8 @@ IRMAS data should be downloaded from [here](https://zenodo.org/record/1290750#.Y
 
 ## Usage
 To use the code run the <i>run.py</i> file with the argument stating which config file to use 
-(default: config/config_files/irmas_all.yaml)
+(default: <i>config/config_files/irmas_all.yaml</i>)
 
 Set the data.params.path to the folder of your IRMAS data.
+
+The code exports the results to the following path: <i>../results/recurrent_method_research/{id}</i>
